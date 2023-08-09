@@ -12,7 +12,8 @@ The `Text` component is a reusable component built on top of the MUI's `<Box>` c
 
 > all object keys are optional (defaults below)
 
-```const clampObject = {
+```javascript
+const clampObject = {
   minPixels?: 11,
   maxPixels?: 21,
   minViewport?: 360,
