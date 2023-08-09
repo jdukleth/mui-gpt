@@ -16,10 +16,10 @@ The `Text` component is a reusable component built on top of the MUI's `<Box>` c
 import { Text } from 'mui-gpt'
 
 const clampObject = {
-  minPixels?: 11,
-  maxPixels?: 21,
-  minViewport?: 360,
-  maxViewport?: 1920
+  minPixels: 11,
+  maxPixels: 21,
+  minViewport: 360,
+  maxViewport: 1920
 }
 
 <Text clamp={clampObject} inline>
