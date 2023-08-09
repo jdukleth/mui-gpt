@@ -8,23 +8,21 @@ The `Text` component is a reusable component built on top of the MUI's `<Box>` c
 - `inline`: Make the component CSS display `inline-block` instead of `block`
 - `...props`: Any other props the `<Box>` component can accept
 
-## Example Clamp Prop Object
+## Usage
 
 > all object keys are optional (defaults below)
 
 ```javascript
+import { Text } from 'mui-gpt'
+
 const clampObject = {
   minPixels?: 11,
   maxPixels?: 21,
   minViewport?: 360,
   maxViewport?: 1920
 }
+
+<Text clamp={clampObject} inline>
+  Hello, World!
+</Text>
 ```
-
-## Usage
-
-```javascript
-import { Text } from './components/TextComponent';
-
-<Text clamp={clampObject} inline>Hello, World!</Text>
- 
