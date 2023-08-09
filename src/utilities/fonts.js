@@ -1,12 +1,6 @@
-/* --- IMPORTS --- */
-import { google } from 'next/font'
-
 /* --- FONT SIZE DEFAULTS --- */
 export const fontSize = {
-  min: 12,
-  max: 28,
+  min: 11,
+  max: 21,
   base: 16
 }
-
-/* --- ROBOTO FLEX FONT FROM GOOGLE FONTS --- */
-export const roboto = google('Roboto Flex').className

@@ -1,32 +1,25 @@
 /* --- IMPORTS --- */
 import { Box } from '@mui/material'
-import breakpoints from '../utilities/breakpoints'
-import { fontSize } from '../utilities/fontUtilities'
-import clampulator from '../utilities/clampulator'
+import { clampulator } from '../utilities/clampulator'
 
-/* --- COMPONENT --- */
-const Text = ({ 
-  children, 
-  minFontSize = fontSize.min, 
-  maxFontSize = fontSize.max,
-  minViewport = breakpoints.sm, 
-  maxViewport = breakpoints.lg 
-}) => (
-  <Box sx={css.textBox(minFontSize, maxFontSize, minViewport, maxViewport)}>
-    {children}
-  </Box>
-)
+/* --- <Text> COMPONENT ---------------------------------------------------- */
+/* uses CSS clamp to scale fonts perfect with viewport width                 */
+/* ------------------------------------------------------------------------- */
+export const Text = ({ children, clamp, inline, ...props }) => {
+  const clampCss = css.textBox(clamp)
+  const inlineCss = inline ? { display: 'inline-block' } : {}
+  const boxCss = { ...clampCss, ...inlineCss }
+
+  return (
+    <Box sx={boxCss} {...props}>
+      {children}
+    </Box>
+  )
+}
 
 /* --- STYLES --- */
 const css = {
-  textBox: (minFontSize, maxFontSize, minViewport, maxViewport) => ({
-    fontSize: `clamp(
-      ${minFontSize}px, 
-      ${clampulator(minFontSize, maxFontSize, minViewport, maxViewport)}, 
-      ${maxFontSize}px
-    )`,
-  }),
+  textBox: (thresholds) => ({
+    fontSize: clampulator(thresholds)
+  })
 }
-
-/* --- EXPORTS --- */
-export default Text

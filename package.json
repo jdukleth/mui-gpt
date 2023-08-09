@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "publish": "npm publish --access public"
-  },  
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/jdukleth/mui-gpt.git"
@@ -19,10 +19,6 @@
     "React",
     "JavaScript"
   ],
-  "peerDependencies": {
-    "react": "^18.0.0",
-    "@mui/material": "^5.0.0"
-  }, 
   "author": "Jason Dukleth",
   "license": "MIT",
   "bugs": {

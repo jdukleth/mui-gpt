@@ -1,5 +1,5 @@
 /* --- BREAKPOINTS --- */
-const breakpoints = {
+export const breakpoints = {
   xs: 0,
   sm: 600,
   md: 960,
@@ -7,4 +7,8 @@ const breakpoints = {
   xl: 1920
 }
 
-export default breakpoints
+/* --- RESOLUTION RANGE --- */
+export const resolution = {
+  min: 360,
+  max: 1920
+}
