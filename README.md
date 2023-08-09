@@ -1,3 +1,3 @@
 # mui-gpt
 
-### Reusable MUI React components. Generated using ChatGPT. Simply your life.
+### AI generated, reusable MUI React components. Simply your life.
