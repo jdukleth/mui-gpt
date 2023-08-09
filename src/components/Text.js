@@ -1,25 +1,24 @@
 /* --- IMPORTS --- */
-import { Box } from '@mui/material'
+import { Typography } from '@mui/material'
 import { clampulator } from 'utilities/clampulator'
 
 /* --- <Text> COMPONENT ---------------------------------------------------- */
 /* uses CSS clamp to scale fonts perfect with viewport width                 */
 /* ------------------------------------------------------------------------- */
-export const Text = ({ children, clamp = {}, sx = {}, inline, ...props }) => {
-  const clampCss = css.textBox(clamp)
-  const inlineCss = inline ? { display: 'inline-block' } : {}
-  const boxCss = { ...sx, ...inlineCss, ...clampCss }
+export const Text = ({ children, clamp = {}, sx = {}, ...props }) => {
+  const clampCss = css.text(clamp)
+  const textCss = { ...sx, ...clampCss }
 
   return (
-    <Box sx={boxCss} {...props}>
+    <Typography sx={textCss} {...props}>
       {children}
-    </Box>
+    </Typography>
   )
 }
 
 /* --- STYLES --- */
 const css = {
-  textBox: (thresholds) => ({
+  text: (thresholds) => ({
     fontSize: clampulator(thresholds)
   })
 }
