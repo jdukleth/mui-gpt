@@ -15,10 +15,10 @@ import { Text } from 'mui-gpt'
 
 // all object keys are optional (defaults below)
 const clampObject = {
-  minPixels: 11,
-  maxPixels: 21,
-  minViewport: 360,
-  maxViewport: 1920
+  min: 11, // font-size (px)
+  max: 21,
+  minVw: 360, // viewport width (px)
+  maxVw: 1920
 }
 
 const MyComponent = () => (

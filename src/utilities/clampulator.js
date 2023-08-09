@@ -1,21 +1,21 @@
-import { resolution } from './breakpoints'
-import { fontSize } from './fonts'
+import { resolution } from 'utilities/breakpoints'
+import { fontSize } from 'utilities/fonts'
 
 /* --- CLAMPULATOR UTILITY FUNCTION --- */
-export const clampulator = (
-  minPixels = fontSize.min,
-  maxPixels = fontSize.max,
-  minViewport = resolution.min,
-  maxViewport = resolution.max
-) => {
-  const slope = (maxPixels - minPixels) / (maxViewport - minViewport)
-  const base = minPixels - slope * minViewport
+export const clampulator = (thresholds) => {
+  const min = thresholds.min ?? fontSize.min
+  const max = thresholds.max ?? fontSize.max
+  const minVw = thresholds.minVw ?? resolution.min
+  const maxVw = thresholds.maxVw ?? resolution.max
+
+  const slope = (max - min) / (maxVw - minVw)
+  const base = min - slope * minVw
 
   return `
     clamp(
-      ${minPixels}px, 
+      ${min}px, 
       calc(${base}px + ${slope * 100}vw), 
-      ${maxPixels}px
+      ${max}px
     )
   `
 }
