@@ -4,14 +4,24 @@ The `Text` component is a reusable component built on top of the MUI's `<Box>` c
 
 ## Props
 
-- `minFontSize`: The minimum font size in pixels (default is from utilities).
-- `maxFontSize`: The maximum font size in pixels (default is from utilities).
-- `minViewport`: The minimum viewport width in pixels (default is from utilities).
-- `maxViewport`: The maximum viewport width in pixels (default is from utilities).
+- `clamp`: An object with optional properties (see below) to be used in our `clampulator`
+- `inline`: Make the component CSS display `inline-block` instead of `block`
+
+## Example Clamp Prop Object
+
+> all object keys are optional (defaults below)
+
+```const clampObject = {
+  minPixels?: 11,
+  maxPixels?: 21,
+  minViewport?: 360,
+  maxViewport?: 1920
+}
+```
 
 ## Usage
 
 ```javascript
 import { Text } from './components/TextComponent';
 
-<Text minFontSize={14} maxFontSize={28}>Hello, World!</Text>
+<Text clamp={clampObject} inline>Hello, World!</Text>
