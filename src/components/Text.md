@@ -10,11 +10,10 @@ The `Text` component is a reusable component built on top of the MUI's `<Box>` c
 
 ## Usage
 
-> all object keys are optional (defaults below)
-
 ```javascript
 import { Text } from 'mui-gpt'
 
+// all object keys are optional (defaults below)
 const clampObject = {
   minPixels: 11,
   maxPixels: 21,
@@ -22,7 +21,7 @@ const clampObject = {
   maxViewport: 1920
 }
 
-const myComponent = () => (
+const MyComponent = () => (
   <Text clamp={clampObject} inline sx={{ color: 'red' }}>
     Hello World!
   </Text>
