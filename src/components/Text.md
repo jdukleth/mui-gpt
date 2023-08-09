@@ -1,4 +1,4 @@
-# Text Component
+# `<Text>` Component
 
 The `Text` component is a per-pixel responsive, reusable component built on top of the MUI's `<Box>` component. It utilizes the CSS `clamp` function to provide responsive font sizing based on the viewport.
 
