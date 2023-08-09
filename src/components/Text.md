@@ -5,7 +5,6 @@ A per-pixel responsive text component built on top of MUI's `<Typography>` compo
 ## Props
 
 - `clamp` [optional] An object with optional properties (see below) to be used in our `clampulator`
-- `inline`: [optional] Make the component CSS display `inline-block` instead of `block`
 - `...props`: [optional] All props the `<Typography>` component accepts (including `sx`)
 
 ## Usage
@@ -22,7 +21,7 @@ const clampObject = {
 }
 
 const MyComponent = () => (
-  <Text clamp={clampObject} inline sx={{ color: 'red' }}>
+  <Text clamp={clampObject} sx={{ color: 'red' }}>
     Hello World!
   </Text>
 )
