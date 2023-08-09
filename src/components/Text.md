@@ -22,7 +22,7 @@ const clampObject = {
   maxViewport: 1920
 }
 
-<Text clamp={clampObject} inline>
+<Text clamp={clampObject} inline sx={{ color: 'red' }}>
   Hello, World!
 </Text>
 ```
