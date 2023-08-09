@@ -1,0 +1,32 @@
+{
+  "name": "mui-gpt",
+  "version": "0.0.1",
+  "description": "Intelligent MUI / Next.js helper components generated using ChatGPT.",
+  "main": "src/index.js",
+  "scripts": {
+    "publish": "npm publish --access public"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jdukleth/mui-gpt.git"
+  },
+  "keywords": [
+    "MUI",
+    "components",
+    "ChatGPT",
+    "Next",
+    "Next.js",
+    "React",
+    "JavaScript"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "@mui/material": "^5.0.0"
+  }, 
+  "author": "Jason Dukleth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdukleth/mui-gpt/issues"
+  },
+  "homepage": "https://github.com/jdukleth/mui-gpt#readme"
+}
